@@ -1,6 +1,6 @@
 #pragma once
 #include "Core/Common.h"
-
+#include "Engine/Engine.h"
 
 namespace Engine 
 {
@@ -13,6 +13,7 @@ namespace Engine
 
 		virtual void onInit() {}
 		virtual void onQuit() {}
+		virtual void onUpdate() {}
 
 		void run();
 		void quit();
@@ -24,6 +25,7 @@ namespace Engine
 		static EApplication* m_Instance;
 	public:
 		bool m_isRunning = true;
+		GEngine* m_engine = nullptr;
 	};
 
 }

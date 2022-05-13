@@ -1,40 +1,39 @@
 #include "EApplication.h"
 #include <stdexcept>
 
-using namespace Engine;
+Engine::EApplication* Engine::EApplication::m_Instance = nullptr;
 
-EApplication* EApplication::m_Instance = nullptr;
-
-EApplication::EApplication()
+Engine::EApplication::EApplication()
 {
 	EASSERT(!m_Instance)
 	m_Instance = this;
+	m_engine = CreateEngine();
 }
 
-EApplication::~EApplication() 
+Engine::EApplication::~EApplication() 
 {
-
+	m_engine->release();
 }
 
-void EApplication::run()
+void Engine::EApplication::run()
 {
 	onInit();
 
 	while (m_isRunning)
 	{
 
-
+		onUpdate();
 	}
 
 	onQuit();
 }
 
-void EApplication::quit()
+void Engine::EApplication::quit()
 {
 	m_isRunning = false;
 }
 
-EApplication* EApplication::get()
+Engine::EApplication* Engine::EApplication::get()
 {
 	EASSERT(m_Instance);
 	return m_Instance;

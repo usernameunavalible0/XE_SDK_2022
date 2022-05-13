@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdlib.h>
+#include <stdexcept>
 
 #define ENGINE_WINDOWS (_WIN32 || _WIN64)
 
