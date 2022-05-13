@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Application/EApplication.h"
-#include "glad/glad.h"
 #include "GLFW/glfw3.h"
 
 #include <iostream>
@@ -13,8 +12,7 @@ public:
 	Application();
 	~Application();
 
-	GLFWwindow* window;
-
+	virtual void preInit();
 	virtual void onInit();
 	virtual void onQuit();
 	virtual void onUpdate();

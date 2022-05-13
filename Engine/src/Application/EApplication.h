@@ -1,6 +1,7 @@
 #pragma once
 #include "Core/Common.h"
 #include "Engine/Engine.h"
+#include "GLFW/glfw3.h"
 
 namespace Engine 
 {
@@ -11,6 +12,7 @@ namespace Engine
 		EApplication();
 		virtual ~EApplication();
 
+		virtual void preInit() {}
 		virtual void onInit() {}
 		virtual void onQuit() {}
 		virtual void onUpdate() {}
@@ -20,6 +22,9 @@ namespace Engine
 
 	public:
 		static EApplication* get();
+
+		GLFWwindow* window;
+
 
 	private:
 		static EApplication* m_Instance;

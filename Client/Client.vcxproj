@@ -149,9 +149,6 @@
   <ItemGroup>
     <ClInclude Include="src\client.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\glad.c" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
