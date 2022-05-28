@@ -31,7 +31,7 @@ void Application::onQuit() // Remember this is before glfw terminates.
 
 }
 
-void Application::onUpdate() // Do think I have to point this out but this is also 
+void Application::onUpdate()
 {
 	if (glfwWindowShouldClose(window) != GL_TRUE) // MUST HAVE THIS IN EXE FOR SAME UNKNOWN REASON AS WHY POLL EVENTS IS HERE!!
 	{
