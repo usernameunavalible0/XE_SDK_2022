@@ -1,7 +1,9 @@
 #pragma once
 
 #include "Application/EApplication.h"
-#include "GLFW/glfw3.h"
+#include "CS_Inter/ClientServer.h"
+#include "CClient.h"
+//#include "GLFW/glfw3.h"
 
 #include <iostream>
 
@@ -16,4 +18,13 @@ public:
 	virtual void onInit();
 	virtual void onQuit();
 	virtual void onUpdate();
+
+};
+
+class Client : public CClient::CCLient
+{
+public:
+	Client();
+	~Client();
+
 };

@@ -78,13 +78,13 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)bin</OutDir>
-    <IntDir>$(SolutionDir)obj</IntDir>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <IntDir>$(ProjectDir)obj\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)bin</OutDir>
-    <IntDir>$(SolutionDir)obj</IntDir>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <IntDir>$(ProjectDir)obj\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -150,15 +150,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\CS_Inter\ClientServer.h" />
     <ClInclude Include="src\Engine\CEngine.h" />
     <ClInclude Include="include\Application\EApplication.h" />
     <ClInclude Include="src\Application\EApplication.h" />
     <ClInclude Include="src\Core\Common.h" />
     <ClInclude Include="src\Engine\Engine.h" />
+    <ClInclude Include="src\Shaders\Shaders.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Core\stb_image.cpp" />
+    <ClCompile Include="src\CS_Inter\ClientServer.cpp" />
     <ClCompile Include="src\Engine\CEngine.cpp" />
     <ClCompile Include="src\Application\EApplication.cpp" />
+    <ClCompile Include="src\Shaders\Shaders.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

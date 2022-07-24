@@ -5,6 +5,8 @@
 
 #define CLIENT_WINDOWS (_WIN32 || _WIN64)
 
+#define CLIENT_EXPORTS
+
 #ifdef CLIENT_WINDOWS
 
 #if defined CLIENT_EXPORTS

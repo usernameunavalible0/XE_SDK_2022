@@ -33,17 +33,11 @@ void Engine::EApplication::run()
 
 	while (m_isRunning)
 	{
+
 		onUpdate();
-		//if (glfwWindowShouldClose(window) != GL_TRUE) // must use if statment because of the stupid way this engine is setup
-		//{
-		//	onUpdate();
-		//	//glfwPollEvents(); --- cant be run here probably because it relates to something about the acctual executable (but i dont know)
-		//}
-		//else
-		//{
-		//	m_isRunning = false;
-		//}
+		
 	}
+
 		onQuit();
 
 		// Delete all the objects we've created
